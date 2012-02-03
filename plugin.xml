@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://funthomas424242.github.com/rades/evm"
+            class="com.github.funthomas424242.rades.evm.evm.EvmPackage"
+            genModel="src/metamodel/evm.genmodel"/>
+   </extension>
+
+</plugin>
