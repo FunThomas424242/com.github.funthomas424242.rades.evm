@@ -10,21 +10,21 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Named Element</b></em>'.
+ * A representation of the model object '<em><b>Model Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.NamedElement#getName <em>Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rades.evm.evm.ModelElement#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
- * @see com.github.funthomas424242.rades.evm.evm.EvmPackage#getNamedElement()
+ * @see com.github.funthomas424242.rades.evm.evm.EvmPackage#getModelElement()
  * @model abstract="true"
  * @generated
  */
-public interface NamedElement extends EObject
+public interface ModelElement extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -36,14 +36,14 @@ public interface NamedElement extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see com.github.funthomas424242.rades.evm.evm.EvmPackage#getNamedElement_Name()
+   * @see com.github.funthomas424242.rades.evm.evm.EvmPackage#getModelElement_Name()
    * @model required="true"
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link com.github.funthomas424242.rades.evm.evm.NamedElement#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link com.github.funthomas424242.rades.evm.evm.ModelElement#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -52,4 +52,4 @@ public interface NamedElement extends EObject
    */
   void setName(String value);
 
-} // NamedElement
+} // ModelElement

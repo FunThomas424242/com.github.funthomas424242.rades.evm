@@ -6,9 +6,9 @@
  */
 package com.github.funthomas424242.rades.evm.evm.impl;
 
-import com.github.funthomas424242.rades.evm.evm.EntityModel;
 import com.github.funthomas424242.rades.evm.evm.EvmPackage;
-import com.github.funthomas424242.rades.evm.evm.Type;
+import com.github.funthomas424242.rades.evm.evm.EyeViewModel;
+import com.github.funthomas424242.rades.evm.evm.ModelElement;
 
 import java.util.Collection;
 
@@ -26,35 +26,35 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Entity Model</b></em>'.
+ * An implementation of the model object '<em><b>Eye View Model</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EntityModelImpl#getTypes <em>Types</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EntityModelImpl extends EObjectImpl implements EntityModel
+public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
 {
   /**
-   * The cached value of the '{@link #getTypes() <em>Types</em>}' containment reference list.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTypes()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected EList<Type> types;
+  protected EList<ModelElement> elements;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected EntityModelImpl()
+  protected EyeViewModelImpl()
   {
     super();
   }
@@ -67,7 +67,7 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   @Override
   protected EClass eStaticClass()
   {
-    return EvmPackage.Literals.ENTITY_MODEL;
+    return EvmPackage.Literals.EYE_VIEW_MODEL;
   }
 
   /**
@@ -75,13 +75,13 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Type> getTypes()
+  public EList<ModelElement> getElements()
   {
-    if (types == null)
+    if (elements == null)
     {
-      types = new EObjectContainmentEList<Type>(Type.class, this, EvmPackage.ENTITY_MODEL__TYPES);
+      elements = new EObjectContainmentEList<ModelElement>(ModelElement.class, this, EvmPackage.EYE_VIEW_MODEL__ELEMENTS);
     }
-    return types;
+    return elements;
   }
 
   /**
@@ -94,8 +94,8 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case EvmPackage.ENTITY_MODEL__TYPES:
-        return ((InternalEList<?>)getTypes()).basicRemove(otherEnd, msgs);
+      case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
+        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -110,8 +110,8 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case EvmPackage.ENTITY_MODEL__TYPES:
-        return getTypes();
+      case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -127,9 +127,9 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case EvmPackage.ENTITY_MODEL__TYPES:
-        getTypes().clear();
-        getTypes().addAll((Collection<? extends Type>)newValue);
+      case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends ModelElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -145,8 +145,8 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case EvmPackage.ENTITY_MODEL__TYPES:
-        getTypes().clear();
+      case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -162,10 +162,10 @@ public class EntityModelImpl extends EObjectImpl implements EntityModel
   {
     switch (featureID)
     {
-      case EvmPackage.ENTITY_MODEL__TYPES:
-        return types != null && !types.isEmpty();
+      case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //EntityModelImpl
+} //EyeViewModelImpl

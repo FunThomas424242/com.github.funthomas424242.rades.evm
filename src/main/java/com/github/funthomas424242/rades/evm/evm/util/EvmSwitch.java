@@ -76,51 +76,121 @@ public class EvmSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case EvmPackage.NAMED_ELEMENT:
+      case EvmPackage.MODEL_ELEMENT:
       {
-        NamedElement namedElement = (NamedElement)theEObject;
-        T result = caseNamedElement(namedElement);
+        ModelElement modelElement = (ModelElement)theEObject;
+        T result = caseModelElement(modelElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvmPackage.TYPE:
+      case EvmPackage.NAVIGATIONPATH:
       {
-        Type type = (Type)theEObject;
-        T result = caseType(type);
-        if (result == null) result = caseNamedElement(type);
+        Navigationpath navigationpath = (Navigationpath)theEObject;
+        T result = caseNavigationpath(navigationpath);
+        if (result == null) result = caseModelElement(navigationpath);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvmPackage.DATA_TYPE:
+      case EvmPackage.DESIGN_PATTERN:
       {
-        DataType dataType = (DataType)theEObject;
-        T result = caseDataType(dataType);
-        if (result == null) result = caseType(dataType);
-        if (result == null) result = caseNamedElement(dataType);
+        DesignPattern designPattern = (DesignPattern)theEObject;
+        T result = caseDesignPattern(designPattern);
+        if (result == null) result = caseModelElement(designPattern);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvmPackage.ENTITY:
+      case EvmPackage.EYE_VIEW_MODEL:
       {
-        Entity entity = (Entity)theEObject;
-        T result = caseEntity(entity);
-        if (result == null) result = caseType(entity);
-        if (result == null) result = caseNamedElement(entity);
+        EyeViewModel eyeViewModel = (EyeViewModel)theEObject;
+        T result = caseEyeViewModel(eyeViewModel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvmPackage.ENTITY_MODEL:
+      case EvmPackage.FORMULAR:
       {
-        EntityModel entityModel = (EntityModel)theEObject;
-        T result = caseEntityModel(entityModel);
+        Formular formular = (Formular)theEObject;
+        T result = caseFormular(formular);
+        if (result == null) result = caseDesignPattern(formular);
+        if (result == null) result = caseModelElement(formular);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case EvmPackage.FEATURE:
+      case EvmPackage.POP_UP:
       {
-        Feature feature = (Feature)theEObject;
-        T result = caseFeature(feature);
-        if (result == null) result = caseNamedElement(feature);
+        PopUp popUp = (PopUp)theEObject;
+        T result = casePopUp(popUp);
+        if (result == null) result = caseDesignPattern(popUp);
+        if (result == null) result = caseModelElement(popUp);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.REPORT:
+      {
+        Report report = (Report)theEObject;
+        T result = caseReport(report);
+        if (result == null) result = caseDesignPattern(report);
+        if (result == null) result = caseModelElement(report);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.LAYOUT:
+      {
+        Layout layout = (Layout)theEObject;
+        T result = caseLayout(layout);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.VERTICAL_LAYOUT:
+      {
+        VerticalLayout verticalLayout = (VerticalLayout)theEObject;
+        T result = caseVerticalLayout(verticalLayout);
+        if (result == null) result = caseLayout(verticalLayout);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.HORIZONTAL_LAYOUT:
+      {
+        HorizontalLayout horizontalLayout = (HorizontalLayout)theEObject;
+        T result = caseHorizontalLayout(horizontalLayout);
+        if (result == null) result = caseLayout(horizontalLayout);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.BUTTON:
+      {
+        Button button = (Button)theEObject;
+        T result = caseButton(button);
+        if (result == null) result = caseInteractionElement(button);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.LABEL:
+      {
+        Label label = (Label)theEObject;
+        T result = caseLabel(label);
+        if (result == null) result = caseInteractionElement(label);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.INPUT_FIELD:
+      {
+        InputField inputField = (InputField)theEObject;
+        T result = caseInputField(inputField);
+        if (result == null) result = caseInteractionElement(inputField);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.INTERACTION_ELEMENT:
+      {
+        InteractionElement interactionElement = (InteractionElement)theEObject;
+        T result = caseInteractionElement(interactionElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case EvmPackage.SERVICE:
+      {
+        Service service = (Service)theEObject;
+        T result = caseService(service);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -129,97 +199,241 @@ public class EvmSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Model Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Model Element</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseNamedElement(NamedElement object)
+  public T caseModelElement(ModelElement object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Navigationpath</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Navigationpath</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseType(Type object)
+  public T caseNavigationpath(Navigationpath object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Data Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Design Pattern</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Data Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Design Pattern</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDataType(DataType object)
+  public T caseDesignPattern(DesignPattern object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Eye View Model</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Eye View Model</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEntity(Entity object)
+  public T caseEyeViewModel(EyeViewModel object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Entity Model</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Formular</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Entity Model</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Formular</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseEntityModel(EntityModel object)
+  public T caseFormular(Formular object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Feature</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Pop Up</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Feature</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Pop Up</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFeature(Feature object)
+  public T casePopUp(PopUp object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Report</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Report</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReport(Report object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Layout</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLayout(Layout object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Vertical Layout</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vertical Layout</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVerticalLayout(VerticalLayout object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Horizontal Layout</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Horizontal Layout</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHorizontalLayout(HorizontalLayout object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Button</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Button</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseButton(Button object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Label</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Label</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLabel(Label object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Input Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Input Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInputField(InputField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Interaction Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Interaction Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInteractionElement(InteractionElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseService(Service object)
   {
     return null;
   }

@@ -7,7 +7,7 @@
 package com.github.funthomas424242.rades.evm.evm.impl;
 
 import com.github.funthomas424242.rades.evm.evm.EvmPackage;
-import com.github.funthomas424242.rades.evm.evm.NamedElement;
+import com.github.funthomas424242.rades.evm.evm.ModelElement;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -18,18 +18,18 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Named Element</b></em>'.
+ * An implementation of the model object '<em><b>Model Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.NamedElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.ModelElementImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public abstract class NamedElementImpl extends EObjectImpl implements NamedElement
+public abstract class ModelElementImpl extends EObjectImpl implements ModelElement
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -56,7 +56,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
    * <!-- end-user-doc -->
    * @generated
    */
-  protected NamedElementImpl()
+  protected ModelElementImpl()
   {
     super();
   }
@@ -69,7 +69,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   @Override
   protected EClass eStaticClass()
   {
-    return EvmPackage.Literals.NAMED_ELEMENT;
+    return EvmPackage.Literals.MODEL_ELEMENT;
   }
 
   /**
@@ -92,7 +92,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.NAMED_ELEMENT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.MODEL_ELEMENT__NAME, oldName, name));
   }
 
   /**
@@ -105,7 +105,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case EvmPackage.NAMED_ELEMENT__NAME:
+      case EvmPackage.MODEL_ELEMENT__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -121,7 +121,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case EvmPackage.NAMED_ELEMENT__NAME:
+      case EvmPackage.MODEL_ELEMENT__NAME:
         setName((String)newValue);
         return;
     }
@@ -138,7 +138,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case EvmPackage.NAMED_ELEMENT__NAME:
+      case EvmPackage.MODEL_ELEMENT__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -155,7 +155,7 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
   {
     switch (featureID)
     {
-      case EvmPackage.NAMED_ELEMENT__NAME:
+      case EvmPackage.MODEL_ELEMENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -178,4 +178,4 @@ public abstract class NamedElementImpl extends EObjectImpl implements NamedEleme
     return result.toString();
   }
 
-} //NamedElementImpl
+} //ModelElementImpl

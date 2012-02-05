@@ -9,7 +9,6 @@ package com.github.funthomas424242.rades.evm.evm.impl;
 import com.github.funthomas424242.rades.evm.evm.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -69,10 +68,17 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
   {
     switch (eClass.getClassifierID())
     {
-      case EvmPackage.DATA_TYPE: return createDataType();
-      case EvmPackage.ENTITY: return createEntity();
-      case EvmPackage.ENTITY_MODEL: return createEntityModel();
-      case EvmPackage.FEATURE: return createFeature();
+      case EvmPackage.NAVIGATIONPATH: return createNavigationpath();
+      case EvmPackage.EYE_VIEW_MODEL: return createEyeViewModel();
+      case EvmPackage.FORMULAR: return createFormular();
+      case EvmPackage.POP_UP: return createPopUp();
+      case EvmPackage.REPORT: return createReport();
+      case EvmPackage.VERTICAL_LAYOUT: return createVerticalLayout();
+      case EvmPackage.HORIZONTAL_LAYOUT: return createHorizontalLayout();
+      case EvmPackage.BUTTON: return createButton();
+      case EvmPackage.LABEL: return createLabel();
+      case EvmPackage.INPUT_FIELD: return createInputField();
+      case EvmPackage.SERVICE: return createService();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -83,16 +89,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public Object createFromString(EDataType eDataType, String initialValue)
+  public Navigationpath createNavigationpath()
   {
-    switch (eDataType.getClassifierID())
-    {
-      case EvmPackage.FEATURE_KIND:
-        return createFeatureKindFromString(eDataType, initialValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
+    NavigationpathImpl navigationpath = new NavigationpathImpl();
+    return navigationpath;
   }
 
   /**
@@ -100,16 +100,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public String convertToString(EDataType eDataType, Object instanceValue)
+  public EyeViewModel createEyeViewModel()
   {
-    switch (eDataType.getClassifierID())
-    {
-      case EvmPackage.FEATURE_KIND:
-        return convertFeatureKindToString(eDataType, instanceValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
+    EyeViewModelImpl eyeViewModel = new EyeViewModelImpl();
+    return eyeViewModel;
   }
 
   /**
@@ -117,10 +111,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DataType createDataType()
+  public Formular createFormular()
   {
-    DataTypeImpl dataType = new DataTypeImpl();
-    return dataType;
+    FormularImpl formular = new FormularImpl();
+    return formular;
   }
 
   /**
@@ -128,10 +122,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Entity createEntity()
+  public PopUp createPopUp()
   {
-    EntityImpl entity = new EntityImpl();
-    return entity;
+    PopUpImpl popUp = new PopUpImpl();
+    return popUp;
   }
 
   /**
@@ -139,10 +133,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public EntityModel createEntityModel()
+  public Report createReport()
   {
-    EntityModelImpl entityModel = new EntityModelImpl();
-    return entityModel;
+    ReportImpl report = new ReportImpl();
+    return report;
   }
 
   /**
@@ -150,10 +144,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Feature createFeature()
+  public VerticalLayout createVerticalLayout()
   {
-    FeatureImpl feature = new FeatureImpl();
-    return feature;
+    VerticalLayoutImpl verticalLayout = new VerticalLayoutImpl();
+    return verticalLayout;
   }
 
   /**
@@ -161,11 +155,10 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FeatureKind createFeatureKindFromString(EDataType eDataType, String initialValue)
+  public HorizontalLayout createHorizontalLayout()
   {
-    FeatureKind result = FeatureKind.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
+    HorizontalLayoutImpl horizontalLayout = new HorizontalLayoutImpl();
+    return horizontalLayout;
   }
 
   /**
@@ -173,9 +166,43 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertFeatureKindToString(EDataType eDataType, Object instanceValue)
+  public Button createButton()
   {
-    return instanceValue == null ? null : instanceValue.toString();
+    ButtonImpl button = new ButtonImpl();
+    return button;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Label createLabel()
+  {
+    LabelImpl label = new LabelImpl();
+    return label;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InputField createInputField()
+  {
+    InputFieldImpl inputField = new InputFieldImpl();
+    return inputField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Service createService()
+  {
+    ServiceImpl service = new ServiceImpl();
+    return service;
   }
 
   /**

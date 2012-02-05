@@ -6,19 +6,26 @@
  */
 package com.github.funthomas424242.rades.evm.evm.impl;
 
-import com.github.funthomas424242.rades.evm.evm.DataType;
-import com.github.funthomas424242.rades.evm.evm.Entity;
-import com.github.funthomas424242.rades.evm.evm.EntityModel;
+import com.github.funthomas424242.rades.evm.evm.Button;
+import com.github.funthomas424242.rades.evm.evm.DesignPattern;
 import com.github.funthomas424242.rades.evm.evm.EvmFactory;
 import com.github.funthomas424242.rades.evm.evm.EvmPackage;
-import com.github.funthomas424242.rades.evm.evm.Feature;
-import com.github.funthomas424242.rades.evm.evm.FeatureKind;
-import com.github.funthomas424242.rades.evm.evm.NamedElement;
-import com.github.funthomas424242.rades.evm.evm.Type;
+import com.github.funthomas424242.rades.evm.evm.EyeViewModel;
+import com.github.funthomas424242.rades.evm.evm.Formular;
+import com.github.funthomas424242.rades.evm.evm.HorizontalLayout;
+import com.github.funthomas424242.rades.evm.evm.InputField;
+import com.github.funthomas424242.rades.evm.evm.InteractionElement;
+import com.github.funthomas424242.rades.evm.evm.Label;
+import com.github.funthomas424242.rades.evm.evm.Layout;
+import com.github.funthomas424242.rades.evm.evm.ModelElement;
+import com.github.funthomas424242.rades.evm.evm.Navigationpath;
+import com.github.funthomas424242.rades.evm.evm.PopUp;
+import com.github.funthomas424242.rades.evm.evm.Report;
+import com.github.funthomas424242.rades.evm.evm.Service;
+import com.github.funthomas424242.rades.evm.evm.VerticalLayout;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -37,49 +44,105 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass namedElementEClass = null;
+  private EClass modelElementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass typeEClass = null;
+  private EClass navigationpathEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass dataTypeEClass = null;
+  private EClass designPatternEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass entityEClass = null;
+  private EClass eyeViewModelEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass entityModelEClass = null;
+  private EClass formularEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass featureEClass = null;
+  private EClass popUpEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum featureKindEEnum = null;
+  private EClass reportEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass layoutEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass verticalLayoutEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass horizontalLayoutEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass buttonEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass labelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass inputFieldEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass interactionElementEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass serviceEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -149,9 +212,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getNamedElement()
+  public EClass getModelElement()
   {
-    return namedElementEClass;
+    return modelElementEClass;
   }
 
   /**
@@ -159,9 +222,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getNamedElement_Name()
+  public EAttribute getModelElement_Name()
   {
-    return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)modelElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -169,9 +232,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getType()
+  public EClass getNavigationpath()
   {
-    return typeEClass;
+    return navigationpathEClass;
   }
 
   /**
@@ -179,9 +242,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getDataType()
+  public EClass getDesignPattern()
   {
-    return dataTypeEClass;
+    return designPatternEClass;
   }
 
   /**
@@ -189,9 +252,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEntity()
+  public EReference getDesignPattern_Layouts()
   {
-    return entityEClass;
+    return (EReference)designPatternEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -199,9 +262,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEntity_Abstract()
+  public EClass getEyeViewModel()
   {
-    return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
+    return eyeViewModelEClass;
   }
 
   /**
@@ -209,9 +272,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEntity_Features()
+  public EReference getEyeViewModel_Elements()
   {
-    return (EReference)entityEClass.getEStructuralFeatures().get(1);
+    return (EReference)eyeViewModelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -219,9 +282,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getEntityModel()
+  public EClass getFormular()
   {
-    return entityModelEClass;
+    return formularEClass;
   }
 
   /**
@@ -229,9 +292,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getEntityModel_Types()
+  public EReference getFormular_Labels()
   {
-    return (EReference)entityModelEClass.getEStructuralFeatures().get(0);
+    return (EReference)formularEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -239,9 +302,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getFeature()
+  public EReference getFormular_Buttons()
   {
-    return featureEClass;
+    return (EReference)formularEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -249,9 +312,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getFeature_Kind()
+  public EReference getFormular_Inputs()
   {
-    return (EAttribute)featureEClass.getEStructuralFeatures().get(0);
+    return (EReference)formularEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -259,9 +322,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getFeature_Type()
+  public EClass getPopUp()
   {
-    return (EReference)featureEClass.getEStructuralFeatures().get(1);
+    return popUpEClass;
   }
 
   /**
@@ -269,9 +332,219 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EEnum getFeatureKind()
+  public EClass getReport()
   {
-    return featureKindEEnum;
+    return reportEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLayout()
+  {
+    return layoutEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLayout_Content()
+  {
+    return (EReference)layoutEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLayout_Sublayout()
+  {
+    return (EReference)layoutEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getVerticalLayout()
+  {
+    return verticalLayoutEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getHorizontalLayout()
+  {
+    return horizontalLayoutEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getButton()
+  {
+    return buttonEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getButton_Text()
+  {
+    return (EAttribute)buttonEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getButton_Img()
+  {
+    return (EAttribute)buttonEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getButton_ValidationService()
+  {
+    return (EReference)buttonEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getButton_ActionService()
+  {
+    return (EReference)buttonEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getLabel()
+  {
+    return labelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLabel_Button()
+  {
+    return (EReference)labelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabel_Text()
+  {
+    return (EAttribute)labelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getLabel_Img()
+  {
+    return (EAttribute)labelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInputField()
+  {
+    return inputFieldEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getInputField_ValidationService()
+  {
+    return (EReference)inputFieldEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getInteractionElement()
+  {
+    return interactionElementEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getInteractionElement_Name()
+  {
+    return (EAttribute)interactionElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getService()
+  {
+    return serviceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getService_ClassName()
+  {
+    return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getService_MethodName()
+  {
+    return (EAttribute)serviceEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -304,26 +577,54 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
     isCreated = true;
 
     // Create classes and their features
-    namedElementEClass = createEClass(NAMED_ELEMENT);
-    createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
+    modelElementEClass = createEClass(MODEL_ELEMENT);
+    createEAttribute(modelElementEClass, MODEL_ELEMENT__NAME);
 
-    typeEClass = createEClass(TYPE);
+    navigationpathEClass = createEClass(NAVIGATIONPATH);
 
-    dataTypeEClass = createEClass(DATA_TYPE);
+    designPatternEClass = createEClass(DESIGN_PATTERN);
+    createEReference(designPatternEClass, DESIGN_PATTERN__LAYOUTS);
 
-    entityEClass = createEClass(ENTITY);
-    createEAttribute(entityEClass, ENTITY__ABSTRACT);
-    createEReference(entityEClass, ENTITY__FEATURES);
+    eyeViewModelEClass = createEClass(EYE_VIEW_MODEL);
+    createEReference(eyeViewModelEClass, EYE_VIEW_MODEL__ELEMENTS);
 
-    entityModelEClass = createEClass(ENTITY_MODEL);
-    createEReference(entityModelEClass, ENTITY_MODEL__TYPES);
+    formularEClass = createEClass(FORMULAR);
+    createEReference(formularEClass, FORMULAR__LABELS);
+    createEReference(formularEClass, FORMULAR__BUTTONS);
+    createEReference(formularEClass, FORMULAR__INPUTS);
 
-    featureEClass = createEClass(FEATURE);
-    createEAttribute(featureEClass, FEATURE__KIND);
-    createEReference(featureEClass, FEATURE__TYPE);
+    popUpEClass = createEClass(POP_UP);
 
-    // Create enums
-    featureKindEEnum = createEEnum(FEATURE_KIND);
+    reportEClass = createEClass(REPORT);
+
+    layoutEClass = createEClass(LAYOUT);
+    createEReference(layoutEClass, LAYOUT__CONTENT);
+    createEReference(layoutEClass, LAYOUT__SUBLAYOUT);
+
+    verticalLayoutEClass = createEClass(VERTICAL_LAYOUT);
+
+    horizontalLayoutEClass = createEClass(HORIZONTAL_LAYOUT);
+
+    buttonEClass = createEClass(BUTTON);
+    createEAttribute(buttonEClass, BUTTON__TEXT);
+    createEAttribute(buttonEClass, BUTTON__IMG);
+    createEReference(buttonEClass, BUTTON__VALIDATION_SERVICE);
+    createEReference(buttonEClass, BUTTON__ACTION_SERVICE);
+
+    labelEClass = createEClass(LABEL);
+    createEReference(labelEClass, LABEL__BUTTON);
+    createEAttribute(labelEClass, LABEL__TEXT);
+    createEAttribute(labelEClass, LABEL__IMG);
+
+    inputFieldEClass = createEClass(INPUT_FIELD);
+    createEReference(inputFieldEClass, INPUT_FIELD__VALIDATION_SERVICE);
+
+    interactionElementEClass = createEClass(INTERACTION_ELEMENT);
+    createEAttribute(interactionElementEClass, INTERACTION_ELEMENT__NAME);
+
+    serviceEClass = createEClass(SERVICE);
+    createEAttribute(serviceEClass, SERVICE__CLASS_NAME);
+    createEAttribute(serviceEClass, SERVICE__METHOD_NAME);
   }
 
   /**
@@ -355,35 +656,66 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    typeEClass.getESuperTypes().add(this.getNamedElement());
-    dataTypeEClass.getESuperTypes().add(this.getType());
-    entityEClass.getESuperTypes().add(this.getType());
-    featureEClass.getESuperTypes().add(this.getNamedElement());
+    navigationpathEClass.getESuperTypes().add(this.getModelElement());
+    designPatternEClass.getESuperTypes().add(this.getModelElement());
+    formularEClass.getESuperTypes().add(this.getDesignPattern());
+    popUpEClass.getESuperTypes().add(this.getDesignPattern());
+    reportEClass.getESuperTypes().add(this.getDesignPattern());
+    verticalLayoutEClass.getESuperTypes().add(this.getLayout());
+    horizontalLayoutEClass.getESuperTypes().add(this.getLayout());
+    buttonEClass.getESuperTypes().add(this.getInteractionElement());
+    labelEClass.getESuperTypes().add(this.getInteractionElement());
+    inputFieldEClass.getESuperTypes().add(this.getInteractionElement());
 
     // Initialize classes and features; add operations and parameters
-    initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(modelElementEClass, ModelElement.class, "ModelElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getModelElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, ModelElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(typeEClass, Type.class, "Type", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(navigationpathEClass, Navigationpath.class, "Navigationpath", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(dataTypeEClass, DataType.class, "DataType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(designPatternEClass, DesignPattern.class, "DesignPattern", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDesignPattern_Layouts(), this.getLayout(), null, "layouts", null, 1, 1, DesignPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getEntity_Abstract(), ecorePackage.getEBoolean(), "abstract", null, 1, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getEntity_Features(), this.getFeature(), null, "features", null, 0, -1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(eyeViewModelEClass, EyeViewModel.class, "EyeViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEyeViewModel_Elements(), this.getModelElement(), null, "elements", null, 1, -1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(entityModelEClass, EntityModel.class, "EntityModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getEntityModel_Types(), this.getType(), null, "types", null, 0, -1, EntityModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(formularEClass, Formular.class, "Formular", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFormular_Labels(), this.getLabel(), null, "labels", null, 0, -1, Formular.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFormular_Buttons(), this.getButton(), null, "buttons", null, 0, -1, Formular.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFormular_Inputs(), this.getInputField(), null, "inputs", null, 0, -1, Formular.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(featureEClass, Feature.class, "Feature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFeature_Kind(), this.getFeatureKind(), "kind", null, 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getFeature_Type(), this.getType(), null, "type", null, 1, 1, Feature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(popUpEClass, PopUp.class, "PopUp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    // Initialize enums and add enum literals
-    initEEnum(featureKindEEnum, FeatureKind.class, "FeatureKind");
-    addEEnumLiteral(featureKindEEnum, FeatureKind.ATTRIBUTE);
-    addEEnumLiteral(featureKindEEnum, FeatureKind.REFERENCE);
-    addEEnumLiteral(featureKindEEnum, FeatureKind.CONTAINMENT);
+    initEClass(reportEClass, Report.class, "Report", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(layoutEClass, Layout.class, "Layout", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLayout_Content(), this.getInteractionElement(), null, "content", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLayout_Sublayout(), this.getLayout(), null, "sublayout", null, 0, -1, Layout.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(verticalLayoutEClass, VerticalLayout.class, "VerticalLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(horizontalLayoutEClass, HorizontalLayout.class, "HorizontalLayout", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getButton_Text(), ecorePackage.getEString(), "text", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getButton_Img(), ecorePackage.getEString(), "img", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getButton_ValidationService(), this.getService(), null, "validationService", null, 0, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getButton_ActionService(), this.getService(), null, "actionService", null, 1, 1, Button.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(labelEClass, Label.class, "Label", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLabel_Button(), this.getButton(), null, "button", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabel_Text(), ecorePackage.getEString(), "text", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getLabel_Img(), ecorePackage.getEString(), "img", null, 0, 1, Label.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(inputFieldEClass, InputField.class, "InputField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getInputField_ValidationService(), this.getService(), null, "validationService", null, 0, 1, InputField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(interactionElementEClass, InteractionElement.class, "InteractionElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInteractionElement_Name(), ecorePackage.getEString(), "name", null, 1, 1, InteractionElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getService_ClassName(), ecorePackage.getEString(), "className", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getService_MethodName(), ecorePackage.getEString(), "methodName", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

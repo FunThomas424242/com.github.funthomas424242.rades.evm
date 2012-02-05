@@ -6,26 +6,49 @@
     copyrightFields="false">
   <genPackages prefix="Evm" basePackage="com.github.funthomas424242.rades.evm" disposableProviderFactory="true"
       ecorePackage="evm.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="evm.ecore#//FeatureKind">
-      <genEnumLiterals ecoreEnumLiteral="evm.ecore#//FeatureKind/attribute"/>
-      <genEnumLiterals ecoreEnumLiteral="evm.ecore#//FeatureKind/reference"/>
-      <genEnumLiterals ecoreEnumLiteral="evm.ecore#//FeatureKind/containment"/>
-    </genEnums>
-    <genClasses image="false" ecoreClass="evm.ecore#//NamedElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//NamedElement/name"/>
+    <genClasses image="false" ecoreClass="evm.ecore#//ModelElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//ModelElement/name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="evm.ecore#//Type"/>
-    <genClasses ecoreClass="evm.ecore#//DataType"/>
-    <genClasses ecoreClass="evm.ecore#//Entity">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Entity/abstract"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Entity/features"/>
+    <genClasses ecoreClass="evm.ecore#//Navigationpath"/>
+    <genClasses image="false" ecoreClass="evm.ecore#//DesignPattern">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//DesignPattern/layouts"/>
     </genClasses>
-    <genClasses ecoreClass="evm.ecore#//EntityModel">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//EntityModel/types"/>
+    <genClasses ecoreClass="evm.ecore#//EyeViewModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//EyeViewModel/elements"/>
     </genClasses>
-    <genClasses ecoreClass="evm.ecore#//Feature">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Feature/kind"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evm.ecore#//Feature/type"/>
+    <genClasses ecoreClass="evm.ecore#//Formular">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Formular/labels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Formular/buttons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Formular/inputs"/>
+    </genClasses>
+    <genClasses ecoreClass="evm.ecore#//PopUp"/>
+    <genClasses ecoreClass="evm.ecore#//Report"/>
+    <genClasses image="false" ecoreClass="evm.ecore#//Layout">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evm.ecore#//Layout/content"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Layout/sublayout"/>
+    </genClasses>
+    <genClasses ecoreClass="evm.ecore#//VerticalLayout"/>
+    <genClasses ecoreClass="evm.ecore#//HorizontalLayout"/>
+    <genClasses ecoreClass="evm.ecore#//Button">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Button/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Button/img"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Button/validationService"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Button/actionService"/>
+    </genClasses>
+    <genClasses ecoreClass="evm.ecore#//Label">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference evm.ecore#//Label/button"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Label/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Label/img"/>
+    </genClasses>
+    <genClasses ecoreClass="evm.ecore#//InputField">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//InputField/validationService"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="evm.ecore#//InteractionElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//InteractionElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="evm.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Service/className"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Service/methodName"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -1,0 +1,56 @@
+EyeViewModel{
+
+Formular "loginUserPassword"
+{
+layout{
+	vertical {
+		 horizontal {
+		[LoginNameLabel]
+		[LoginNameInput]
+		}
+	[Login Button]
+	}
+}
+Button "Login Button" { 
+	text="Enter"
+	actionService { 
+	class "LoginService"
+	method "loginAs" 
+	}
+}
+
+Button "Cancel" {
+	text = "Cancel"
+	actionService {
+	class "NavigationService"
+	method "cancel"
+	}
+}
+
+Label "LoginNameLabel" { 
+	text="LoginName:"
+
+ }
+
+InputField "LoginNameInput" {
+	validationService {
+		class "ValidationService"
+		method "isValidName"
+	}
+ } 
+
+
+Label "PasswordLabel" { 
+	text="Password:"
+
+ }
+
+InputField "PasswordInput" {
+	validationService {
+		class "ValidationService"
+		method "isSecurePassword"
+	}
+ } 
+
+
+}

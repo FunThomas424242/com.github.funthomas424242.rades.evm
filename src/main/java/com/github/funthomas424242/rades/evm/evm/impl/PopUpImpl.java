@@ -7,27 +7,27 @@
 package com.github.funthomas424242.rades.evm.evm.impl;
 
 import com.github.funthomas424242.rades.evm.evm.EvmPackage;
-import com.github.funthomas424242.rades.evm.evm.Type;
+import com.github.funthomas424242.rades.evm.evm.PopUp;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Type</b></em>'.
+ * An implementation of the model object '<em><b>Pop Up</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public abstract class TypeImpl extends NamedElementImpl implements Type
+public class PopUpImpl extends DesignPatternImpl implements PopUp
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TypeImpl()
+  protected PopUpImpl()
   {
     super();
   }
@@ -40,7 +40,7 @@ public abstract class TypeImpl extends NamedElementImpl implements Type
   @Override
   protected EClass eStaticClass()
   {
-    return EvmPackage.Literals.TYPE;
+    return EvmPackage.Literals.POP_UP;
   }
 
-} //TypeImpl
+} //PopUpImpl

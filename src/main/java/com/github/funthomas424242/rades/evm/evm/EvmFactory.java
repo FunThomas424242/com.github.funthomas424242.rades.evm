@@ -27,40 +27,103 @@ public interface EvmFactory extends EFactory
   EvmFactory eINSTANCE = com.github.funthomas424242.rades.evm.evm.impl.EvmFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Data Type</em>'.
+   * Returns a new object of class '<em>Navigationpath</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Data Type</em>'.
+   * @return a new object of class '<em>Navigationpath</em>'.
    * @generated
    */
-  DataType createDataType();
+  Navigationpath createNavigationpath();
 
   /**
-   * Returns a new object of class '<em>Entity</em>'.
+   * Returns a new object of class '<em>Eye View Model</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity</em>'.
+   * @return a new object of class '<em>Eye View Model</em>'.
    * @generated
    */
-  Entity createEntity();
+  EyeViewModel createEyeViewModel();
 
   /**
-   * Returns a new object of class '<em>Entity Model</em>'.
+   * Returns a new object of class '<em>Formular</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Entity Model</em>'.
+   * @return a new object of class '<em>Formular</em>'.
    * @generated
    */
-  EntityModel createEntityModel();
+  Formular createFormular();
 
   /**
-   * Returns a new object of class '<em>Feature</em>'.
+   * Returns a new object of class '<em>Pop Up</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Feature</em>'.
+   * @return a new object of class '<em>Pop Up</em>'.
    * @generated
    */
-  Feature createFeature();
+  PopUp createPopUp();
+
+  /**
+   * Returns a new object of class '<em>Report</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Report</em>'.
+   * @generated
+   */
+  Report createReport();
+
+  /**
+   * Returns a new object of class '<em>Vertical Layout</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vertical Layout</em>'.
+   * @generated
+   */
+  VerticalLayout createVerticalLayout();
+
+  /**
+   * Returns a new object of class '<em>Horizontal Layout</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Horizontal Layout</em>'.
+   * @generated
+   */
+  HorizontalLayout createHorizontalLayout();
+
+  /**
+   * Returns a new object of class '<em>Button</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Button</em>'.
+   * @generated
+   */
+  Button createButton();
+
+  /**
+   * Returns a new object of class '<em>Label</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Label</em>'.
+   * @generated
+   */
+  Label createLabel();
+
+  /**
+   * Returns a new object of class '<em>Input Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Input Field</em>'.
+   * @generated
+   */
+  InputField createInputField();
+
+  /**
+   * Returns a new object of class '<em>Service</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Service</em>'.
+   * @generated
+   */
+  Service createService();
 
   /**
    * Returns the package supported by this factory.

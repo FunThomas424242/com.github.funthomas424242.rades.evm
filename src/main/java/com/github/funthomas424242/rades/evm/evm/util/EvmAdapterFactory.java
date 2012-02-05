@@ -79,34 +79,79 @@ public class EvmAdapterFactory extends AdapterFactoryImpl
     new EvmSwitch<Adapter>()
     {
       @Override
-      public Adapter caseNamedElement(NamedElement object)
+      public Adapter caseModelElement(ModelElement object)
       {
-        return createNamedElementAdapter();
+        return createModelElementAdapter();
       }
       @Override
-      public Adapter caseType(Type object)
+      public Adapter caseNavigationpath(Navigationpath object)
       {
-        return createTypeAdapter();
+        return createNavigationpathAdapter();
       }
       @Override
-      public Adapter caseDataType(DataType object)
+      public Adapter caseDesignPattern(DesignPattern object)
       {
-        return createDataTypeAdapter();
+        return createDesignPatternAdapter();
       }
       @Override
-      public Adapter caseEntity(Entity object)
+      public Adapter caseEyeViewModel(EyeViewModel object)
       {
-        return createEntityAdapter();
+        return createEyeViewModelAdapter();
       }
       @Override
-      public Adapter caseEntityModel(EntityModel object)
+      public Adapter caseFormular(Formular object)
       {
-        return createEntityModelAdapter();
+        return createFormularAdapter();
       }
       @Override
-      public Adapter caseFeature(Feature object)
+      public Adapter casePopUp(PopUp object)
       {
-        return createFeatureAdapter();
+        return createPopUpAdapter();
+      }
+      @Override
+      public Adapter caseReport(Report object)
+      {
+        return createReportAdapter();
+      }
+      @Override
+      public Adapter caseLayout(Layout object)
+      {
+        return createLayoutAdapter();
+      }
+      @Override
+      public Adapter caseVerticalLayout(VerticalLayout object)
+      {
+        return createVerticalLayoutAdapter();
+      }
+      @Override
+      public Adapter caseHorizontalLayout(HorizontalLayout object)
+      {
+        return createHorizontalLayoutAdapter();
+      }
+      @Override
+      public Adapter caseButton(Button object)
+      {
+        return createButtonAdapter();
+      }
+      @Override
+      public Adapter caseLabel(Label object)
+      {
+        return createLabelAdapter();
+      }
+      @Override
+      public Adapter caseInputField(InputField object)
+      {
+        return createInputFieldAdapter();
+      }
+      @Override
+      public Adapter caseInteractionElement(InteractionElement object)
+      {
+        return createInteractionElementAdapter();
+      }
+      @Override
+      public Adapter caseService(Service object)
+      {
+        return createServiceAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -131,91 +176,226 @@ public class EvmAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.NamedElement <em>Named Element</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.ModelElement <em>Model Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rades.evm.evm.NamedElement
+   * @see com.github.funthomas424242.rades.evm.evm.ModelElement
    * @generated
    */
-  public Adapter createNamedElementAdapter()
+  public Adapter createModelElementAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Type <em>Type</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Navigationpath <em>Navigationpath</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rades.evm.evm.Type
+   * @see com.github.funthomas424242.rades.evm.evm.Navigationpath
    * @generated
    */
-  public Adapter createTypeAdapter()
+  public Adapter createNavigationpathAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.DataType <em>Data Type</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.DesignPattern <em>Design Pattern</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rades.evm.evm.DataType
+   * @see com.github.funthomas424242.rades.evm.evm.DesignPattern
    * @generated
    */
-  public Adapter createDataTypeAdapter()
+  public Adapter createDesignPatternAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Entity <em>Entity</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel <em>Eye View Model</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rades.evm.evm.Entity
+   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel
    * @generated
    */
-  public Adapter createEntityAdapter()
+  public Adapter createEyeViewModelAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.EntityModel <em>Entity Model</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Formular <em>Formular</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rades.evm.evm.EntityModel
+   * @see com.github.funthomas424242.rades.evm.evm.Formular
    * @generated
    */
-  public Adapter createEntityModelAdapter()
+  public Adapter createFormularAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Feature <em>Feature</em>}'.
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.PopUp <em>Pop Up</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.github.funthomas424242.rades.evm.evm.Feature
+   * @see com.github.funthomas424242.rades.evm.evm.PopUp
    * @generated
    */
-  public Adapter createFeatureAdapter()
+  public Adapter createPopUpAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Report <em>Report</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.Report
+   * @generated
+   */
+  public Adapter createReportAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Layout <em>Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.Layout
+   * @generated
+   */
+  public Adapter createLayoutAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.VerticalLayout <em>Vertical Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.VerticalLayout
+   * @generated
+   */
+  public Adapter createVerticalLayoutAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.HorizontalLayout <em>Horizontal Layout</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.HorizontalLayout
+   * @generated
+   */
+  public Adapter createHorizontalLayoutAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Button <em>Button</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.Button
+   * @generated
+   */
+  public Adapter createButtonAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Label <em>Label</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.Label
+   * @generated
+   */
+  public Adapter createLabelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.InputField <em>Input Field</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.InputField
+   * @generated
+   */
+  public Adapter createInputFieldAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.InteractionElement <em>Interaction Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.InteractionElement
+   * @generated
+   */
+  public Adapter createInteractionElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.Service <em>Service</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.Service
+   * @generated
+   */
+  public Adapter createServiceAdapter()
   {
     return null;
   }
