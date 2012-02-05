@@ -9,6 +9,7 @@ OPTIONS{
  usePredefinedTokens="true";
 }
 
+
 RULES {
 	EntityModel ::= "model" types*;
 	Entity ::= abstract["abstract" : ""] "entity" name[] "{" features* "}";
