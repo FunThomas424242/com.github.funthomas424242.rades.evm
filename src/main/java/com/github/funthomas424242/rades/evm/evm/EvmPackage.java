@@ -173,13 +173,49 @@ public interface EvmPackage extends EPackage
   int EYE_VIEW_MODEL__ELEMENTS = 0;
 
   /**
+   * The feature id for the '<em><b>Group Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EYE_VIEW_MODEL__GROUP_ID = 1;
+
+  /**
+   * The feature id for the '<em><b>Artifact Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EYE_VIEW_MODEL__ARTIFACT_ID = 2;
+
+  /**
+   * The feature id for the '<em><b>Version</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EYE_VIEW_MODEL__VERSION = 3;
+
+  /**
+   * The feature id for the '<em><b>Project Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EYE_VIEW_MODEL__PROJECT_NAME = 4;
+
+  /**
    * The number of structural features of the '<em>Eye View Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EYE_VIEW_MODEL_FEATURE_COUNT = 1;
+  int EYE_VIEW_MODEL_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rades.evm.evm.impl.FormularImpl <em>Formular</em>}' class.
@@ -726,6 +762,50 @@ public interface EvmPackage extends EPackage
   EReference getEyeViewModel_Elements();
 
   /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getGroupId <em>Group Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Group Id</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getGroupId()
+   * @see #getEyeViewModel()
+   * @generated
+   */
+  EAttribute getEyeViewModel_GroupId();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getArtifactId <em>Artifact Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Artifact Id</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getArtifactId()
+   * @see #getEyeViewModel()
+   * @generated
+   */
+  EAttribute getEyeViewModel_ArtifactId();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getVersion <em>Version</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Version</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getVersion()
+   * @see #getEyeViewModel()
+   * @generated
+   */
+  EAttribute getEyeViewModel_Version();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getProjectName <em>Project Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Project Name</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getProjectName()
+   * @see #getEyeViewModel()
+   * @generated
+   */
+  EAttribute getEyeViewModel_ProjectName();
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rades.evm.evm.Formular <em>Formular</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1097,6 +1177,38 @@ public interface EvmPackage extends EPackage
      * @generated
      */
     EReference EYE_VIEW_MODEL__ELEMENTS = eINSTANCE.getEyeViewModel_Elements();
+
+    /**
+     * The meta object literal for the '<em><b>Group Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EYE_VIEW_MODEL__GROUP_ID = eINSTANCE.getEyeViewModel_GroupId();
+
+    /**
+     * The meta object literal for the '<em><b>Artifact Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EYE_VIEW_MODEL__ARTIFACT_ID = eINSTANCE.getEyeViewModel_ArtifactId();
+
+    /**
+     * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EYE_VIEW_MODEL__VERSION = eINSTANCE.getEyeViewModel_Version();
+
+    /**
+     * The meta object literal for the '<em><b>Project Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EYE_VIEW_MODEL__PROJECT_NAME = eINSTANCE.getEyeViewModel_ProjectName();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rades.evm.evm.impl.FormularImpl <em>Formular</em>}' class.

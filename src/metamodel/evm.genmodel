@@ -15,6 +15,10 @@
     </genClasses>
     <genClasses ecoreClass="evm.ecore#//EyeViewModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//EyeViewModel/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/groupId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/artifactId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/projectName"/>
     </genClasses>
     <genClasses ecoreClass="evm.ecore#//Formular">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Formular/labels"/>

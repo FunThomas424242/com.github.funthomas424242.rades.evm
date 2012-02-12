@@ -282,6 +282,46 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getEyeViewModel_GroupId()
+  {
+    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEyeViewModel_ArtifactId()
+  {
+    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEyeViewModel_Version()
+  {
+    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEyeViewModel_ProjectName()
+  {
+    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFormular()
   {
     return formularEClass;
@@ -587,6 +627,10 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
 
     eyeViewModelEClass = createEClass(EYE_VIEW_MODEL);
     createEReference(eyeViewModelEClass, EYE_VIEW_MODEL__ELEMENTS);
+    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__GROUP_ID);
+    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__ARTIFACT_ID);
+    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__VERSION);
+    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__PROJECT_NAME);
 
     formularEClass = createEClass(FORMULAR);
     createEReference(formularEClass, FORMULAR__LABELS);
@@ -678,6 +722,10 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
 
     initEClass(eyeViewModelEClass, EyeViewModel.class, "EyeViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEyeViewModel_Elements(), this.getModelElement(), null, "elements", null, 1, -1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEyeViewModel_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEyeViewModel_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEyeViewModel_Version(), ecorePackage.getEString(), "version", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEyeViewModel_ProjectName(), ecorePackage.getEString(), "projectName", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(formularEClass, Formular.class, "Formular", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFormular_Labels(), this.getLabel(), null, "labels", null, 0, -1, Formular.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

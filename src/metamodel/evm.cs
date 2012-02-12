@@ -24,7 +24,7 @@ RULES {
     //ImportERModel ::= "import" erm:erm.Entity ";";
     //Import ::= ("import" importedResource['<','>'] "." )+ ;
     //EyeViewModel ::= "EyeViewModel" ("imports:" imports)? "{" (views)+ "}";
-    EyeViewModel ::= "EyeViewModel" //("imports:" imports)?
+    EyeViewModel ::= "EyeViewModel" "projectName:" projectName['"','"'] "groupID:" groupId['"','"'] "artifactID:" artifactId['"','"'] "version:" version['"','"']
      "{" (elements)+ "}";
    
    // Beschreibung der Formulare
