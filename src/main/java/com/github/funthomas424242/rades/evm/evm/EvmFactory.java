@@ -126,6 +126,15 @@ public interface EvmFactory extends EFactory
   Service createService();
 
   /**
+   * Returns a new object of class '<em>Project Meta Data</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Project Meta Data</em>'.
+   * @generated
+   */
+  ProjectMetaData createProjectMetaData();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -24,8 +24,10 @@ RULES {
     //ImportERModel ::= "import" erm:erm.Entity ";";
     //Import ::= ("import" importedResource['<','>'] "." )+ ;
     //EyeViewModel ::= "EyeViewModel" ("imports:" imports)? "{" (views)+ "}";
-    EyeViewModel ::= "EyeViewModel" "projectName:" projectName['"','"'] "groupID:" groupId['"','"'] "artifactID:" artifactId['"','"'] "version:" version['"','"']
-     "{" (elements)+ "}";
+    EyeViewModel ::=  "Project" "{" (projectData) "}"  "EyeViewModel"  "{" (elements)+ "}";
+   
+   ProjectMetaData ::= "projectName:" projectName['"','"'] 
+    "groupID:" groupId['"','"'] "artifactID:" artifactId['"','"'] "version:" version['"','"'];
    
    // Beschreibung der Formulare
     Formular ::= "Formular" name['"','"'] "{"  ("layout" "{" layouts "}" ) (labels | buttons | inputs)* "}";

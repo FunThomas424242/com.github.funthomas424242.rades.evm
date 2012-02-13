@@ -194,6 +194,13 @@ public class EvmSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case EvmPackage.PROJECT_META_DATA:
+      {
+        ProjectMetaData projectMetaData = (ProjectMetaData)theEObject;
+        T result = caseProjectMetaData(projectMetaData);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -434,6 +441,22 @@ public class EvmSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseService(Service object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Project Meta Data</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Project Meta Data</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseProjectMetaData(ProjectMetaData object)
   {
     return null;
   }

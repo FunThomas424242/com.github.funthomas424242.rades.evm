@@ -154,6 +154,11 @@ public class EvmAdapterFactory extends AdapterFactoryImpl
         return createServiceAdapter();
       }
       @Override
+      public Adapter caseProjectMetaData(ProjectMetaData object)
+      {
+        return createProjectMetaDataAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -396,6 +401,21 @@ public class EvmAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createServiceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.github.funthomas424242.rades.evm.evm.ProjectMetaData <em>Project Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.github.funthomas424242.rades.evm.evm.ProjectMetaData
+   * @generated
+   */
+  public Adapter createProjectMetaDataAdapter()
   {
     return null;
   }

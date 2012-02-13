@@ -20,6 +20,7 @@ import com.github.funthomas424242.rades.evm.evm.Layout;
 import com.github.funthomas424242.rades.evm.evm.ModelElement;
 import com.github.funthomas424242.rades.evm.evm.Navigationpath;
 import com.github.funthomas424242.rades.evm.evm.PopUp;
+import com.github.funthomas424242.rades.evm.evm.ProjectMetaData;
 import com.github.funthomas424242.rades.evm.evm.Report;
 import com.github.funthomas424242.rades.evm.evm.Service;
 import com.github.funthomas424242.rades.evm.evm.VerticalLayout;
@@ -143,6 +144,13 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * @generated
    */
   private EClass serviceEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass projectMetaDataEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -282,39 +290,9 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEyeViewModel_GroupId()
+  public EReference getEyeViewModel_ProjectData()
   {
-    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEyeViewModel_ArtifactId()
-  {
-    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEyeViewModel_Version()
-  {
-    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getEyeViewModel_ProjectName()
-  {
-    return (EAttribute)eyeViewModelEClass.getEStructuralFeatures().get(4);
+    return (EReference)eyeViewModelEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -592,6 +570,56 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getProjectMetaData()
+  {
+    return projectMetaDataEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectMetaData_ProjectName()
+  {
+    return (EAttribute)projectMetaDataEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectMetaData_GroupId()
+  {
+    return (EAttribute)projectMetaDataEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectMetaData_ArtifactId()
+  {
+    return (EAttribute)projectMetaDataEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getProjectMetaData_Version()
+  {
+    return (EAttribute)projectMetaDataEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EvmFactory getEvmFactory()
   {
     return (EvmFactory)getEFactoryInstance();
@@ -627,10 +655,7 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
 
     eyeViewModelEClass = createEClass(EYE_VIEW_MODEL);
     createEReference(eyeViewModelEClass, EYE_VIEW_MODEL__ELEMENTS);
-    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__GROUP_ID);
-    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__ARTIFACT_ID);
-    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__VERSION);
-    createEAttribute(eyeViewModelEClass, EYE_VIEW_MODEL__PROJECT_NAME);
+    createEReference(eyeViewModelEClass, EYE_VIEW_MODEL__PROJECT_DATA);
 
     formularEClass = createEClass(FORMULAR);
     createEReference(formularEClass, FORMULAR__LABELS);
@@ -669,6 +694,12 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
     serviceEClass = createEClass(SERVICE);
     createEAttribute(serviceEClass, SERVICE__CLASS_NAME);
     createEAttribute(serviceEClass, SERVICE__METHOD_NAME);
+
+    projectMetaDataEClass = createEClass(PROJECT_META_DATA);
+    createEAttribute(projectMetaDataEClass, PROJECT_META_DATA__PROJECT_NAME);
+    createEAttribute(projectMetaDataEClass, PROJECT_META_DATA__GROUP_ID);
+    createEAttribute(projectMetaDataEClass, PROJECT_META_DATA__ARTIFACT_ID);
+    createEAttribute(projectMetaDataEClass, PROJECT_META_DATA__VERSION);
   }
 
   /**
@@ -722,10 +753,7 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
 
     initEClass(eyeViewModelEClass, EyeViewModel.class, "EyeViewModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getEyeViewModel_Elements(), this.getModelElement(), null, "elements", null, 1, -1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEyeViewModel_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEyeViewModel_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEyeViewModel_Version(), ecorePackage.getEString(), "version", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getEyeViewModel_ProjectName(), ecorePackage.getEString(), "projectName", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getEyeViewModel_ProjectData(), this.getProjectMetaData(), null, "projectData", null, 1, 1, EyeViewModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(formularEClass, Formular.class, "Formular", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFormular_Labels(), this.getLabel(), null, "labels", null, 0, -1, Formular.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -764,6 +792,12 @@ public class EvmPackageImpl extends EPackageImpl implements EvmPackage
     initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getService_ClassName(), ecorePackage.getEString(), "className", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getService_MethodName(), ecorePackage.getEString(), "methodName", null, 1, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(projectMetaDataEClass, ProjectMetaData.class, "ProjectMetaData", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getProjectMetaData_ProjectName(), ecorePackage.getEString(), "projectName", null, 1, 1, ProjectMetaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectMetaData_GroupId(), ecorePackage.getEString(), "groupId", null, 1, 1, ProjectMetaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectMetaData_ArtifactId(), ecorePackage.getEString(), "artifactId", null, 1, 1, ProjectMetaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProjectMetaData_Version(), ecorePackage.getEString(), "version", null, 1, 1, ProjectMetaData.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

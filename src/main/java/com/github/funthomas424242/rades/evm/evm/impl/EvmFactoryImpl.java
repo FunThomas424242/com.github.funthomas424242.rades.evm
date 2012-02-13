@@ -79,6 +79,7 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
       case EvmPackage.LABEL: return createLabel();
       case EvmPackage.INPUT_FIELD: return createInputField();
       case EvmPackage.SERVICE: return createService();
+      case EvmPackage.PROJECT_META_DATA: return createProjectMetaData();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -203,6 +204,17 @@ public class EvmFactoryImpl extends EFactoryImpl implements EvmFactory
   {
     ServiceImpl service = new ServiceImpl();
     return service;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ProjectMetaData createProjectMetaData()
+  {
+    ProjectMetaDataImpl projectMetaData = new ProjectMetaDataImpl();
+    return projectMetaData;
   }
 
   /**

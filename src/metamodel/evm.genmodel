@@ -15,10 +15,7 @@
     </genClasses>
     <genClasses ecoreClass="evm.ecore#//EyeViewModel">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//EyeViewModel/elements"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/groupId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/artifactId"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/version"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//EyeViewModel/projectName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//EyeViewModel/projectData"/>
     </genClasses>
     <genClasses ecoreClass="evm.ecore#//Formular">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference evm.ecore#//Formular/labels"/>
@@ -53,6 +50,12 @@
     <genClasses ecoreClass="evm.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Service/className"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//Service/methodName"/>
+    </genClasses>
+    <genClasses ecoreClass="evm.ecore#//ProjectMetaData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//ProjectMetaData/projectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//ProjectMetaData/groupId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//ProjectMetaData/artifactId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute evm.ecore#//ProjectMetaData/version"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

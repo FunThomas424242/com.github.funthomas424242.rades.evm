@@ -173,40 +173,13 @@ public interface EvmPackage extends EPackage
   int EYE_VIEW_MODEL__ELEMENTS = 0;
 
   /**
-   * The feature id for the '<em><b>Group Id</b></em>' attribute.
+   * The feature id for the '<em><b>Project Data</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int EYE_VIEW_MODEL__GROUP_ID = 1;
-
-  /**
-   * The feature id for the '<em><b>Artifact Id</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EYE_VIEW_MODEL__ARTIFACT_ID = 2;
-
-  /**
-   * The feature id for the '<em><b>Version</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EYE_VIEW_MODEL__VERSION = 3;
-
-  /**
-   * The feature id for the '<em><b>Project Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int EYE_VIEW_MODEL__PROJECT_NAME = 4;
+  int EYE_VIEW_MODEL__PROJECT_DATA = 1;
 
   /**
    * The number of structural features of the '<em>Eye View Model</em>' class.
@@ -215,7 +188,7 @@ public interface EvmPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EYE_VIEW_MODEL_FEATURE_COUNT = 5;
+  int EYE_VIEW_MODEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.github.funthomas424242.rades.evm.evm.impl.FormularImpl <em>Formular</em>}' class.
@@ -689,6 +662,62 @@ public interface EvmPackage extends EPackage
 
 
   /**
+   * The meta object id for the '{@link com.github.funthomas424242.rades.evm.evm.impl.ProjectMetaDataImpl <em>Project Meta Data</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.github.funthomas424242.rades.evm.evm.impl.ProjectMetaDataImpl
+   * @see com.github.funthomas424242.rades.evm.evm.impl.EvmPackageImpl#getProjectMetaData()
+   * @generated
+   */
+  int PROJECT_META_DATA = 15;
+
+  /**
+   * The feature id for the '<em><b>Project Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT_META_DATA__PROJECT_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Group Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT_META_DATA__GROUP_ID = 1;
+
+  /**
+   * The feature id for the '<em><b>Artifact Id</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT_META_DATA__ARTIFACT_ID = 2;
+
+  /**
+   * The feature id for the '<em><b>Version</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT_META_DATA__VERSION = 3;
+
+  /**
+   * The number of structural features of the '<em>Project Meta Data</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROJECT_META_DATA_FEATURE_COUNT = 4;
+
+
+  /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rades.evm.evm.ModelElement <em>Model Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -762,48 +791,15 @@ public interface EvmPackage extends EPackage
   EReference getEyeViewModel_Elements();
 
   /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getGroupId <em>Group Id</em>}'.
+   * Returns the meta object for the containment reference '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getProjectData <em>Project Data</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Group Id</em>'.
-   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getGroupId()
+   * @return the meta object for the containment reference '<em>Project Data</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getProjectData()
    * @see #getEyeViewModel()
    * @generated
    */
-  EAttribute getEyeViewModel_GroupId();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getArtifactId <em>Artifact Id</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Artifact Id</em>'.
-   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getArtifactId()
-   * @see #getEyeViewModel()
-   * @generated
-   */
-  EAttribute getEyeViewModel_ArtifactId();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getVersion <em>Version</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Version</em>'.
-   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getVersion()
-   * @see #getEyeViewModel()
-   * @generated
-   */
-  EAttribute getEyeViewModel_Version();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.EyeViewModel#getProjectName <em>Project Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Project Name</em>'.
-   * @see com.github.funthomas424242.rades.evm.evm.EyeViewModel#getProjectName()
-   * @see #getEyeViewModel()
-   * @generated
-   */
-  EAttribute getEyeViewModel_ProjectName();
+  EReference getEyeViewModel_ProjectData();
 
   /**
    * Returns the meta object for class '{@link com.github.funthomas424242.rades.evm.evm.Formular <em>Formular</em>}'.
@@ -1092,6 +1088,60 @@ public interface EvmPackage extends EPackage
   EAttribute getService_MethodName();
 
   /**
+   * Returns the meta object for class '{@link com.github.funthomas424242.rades.evm.evm.ProjectMetaData <em>Project Meta Data</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Project Meta Data</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.ProjectMetaData
+   * @generated
+   */
+  EClass getProjectMetaData();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getProjectName <em>Project Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Project Name</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getProjectName()
+   * @see #getProjectMetaData()
+   * @generated
+   */
+  EAttribute getProjectMetaData_ProjectName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getGroupId <em>Group Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Group Id</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getGroupId()
+   * @see #getProjectMetaData()
+   * @generated
+   */
+  EAttribute getProjectMetaData_GroupId();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getArtifactId <em>Artifact Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Artifact Id</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getArtifactId()
+   * @see #getProjectMetaData()
+   * @generated
+   */
+  EAttribute getProjectMetaData_ArtifactId();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getVersion <em>Version</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Version</em>'.
+   * @see com.github.funthomas424242.rades.evm.evm.ProjectMetaData#getVersion()
+   * @see #getProjectMetaData()
+   * @generated
+   */
+  EAttribute getProjectMetaData_Version();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1179,36 +1229,12 @@ public interface EvmPackage extends EPackage
     EReference EYE_VIEW_MODEL__ELEMENTS = eINSTANCE.getEyeViewModel_Elements();
 
     /**
-     * The meta object literal for the '<em><b>Group Id</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Project Data</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute EYE_VIEW_MODEL__GROUP_ID = eINSTANCE.getEyeViewModel_GroupId();
-
-    /**
-     * The meta object literal for the '<em><b>Artifact Id</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EYE_VIEW_MODEL__ARTIFACT_ID = eINSTANCE.getEyeViewModel_ArtifactId();
-
-    /**
-     * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EYE_VIEW_MODEL__VERSION = eINSTANCE.getEyeViewModel_Version();
-
-    /**
-     * The meta object literal for the '<em><b>Project Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute EYE_VIEW_MODEL__PROJECT_NAME = eINSTANCE.getEyeViewModel_ProjectName();
+    EReference EYE_VIEW_MODEL__PROJECT_DATA = eINSTANCE.getEyeViewModel_ProjectData();
 
     /**
      * The meta object literal for the '{@link com.github.funthomas424242.rades.evm.evm.impl.FormularImpl <em>Formular</em>}' class.
@@ -1447,6 +1473,48 @@ public interface EvmPackage extends EPackage
      * @generated
      */
     EAttribute SERVICE__METHOD_NAME = eINSTANCE.getService_MethodName();
+
+    /**
+     * The meta object literal for the '{@link com.github.funthomas424242.rades.evm.evm.impl.ProjectMetaDataImpl <em>Project Meta Data</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.github.funthomas424242.rades.evm.evm.impl.ProjectMetaDataImpl
+     * @see com.github.funthomas424242.rades.evm.evm.impl.EvmPackageImpl#getProjectMetaData()
+     * @generated
+     */
+    EClass PROJECT_META_DATA = eINSTANCE.getProjectMetaData();
+
+    /**
+     * The meta object literal for the '<em><b>Project Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT_META_DATA__PROJECT_NAME = eINSTANCE.getProjectMetaData_ProjectName();
+
+    /**
+     * The meta object literal for the '<em><b>Group Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT_META_DATA__GROUP_ID = eINSTANCE.getProjectMetaData_GroupId();
+
+    /**
+     * The meta object literal for the '<em><b>Artifact Id</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT_META_DATA__ARTIFACT_ID = eINSTANCE.getProjectMetaData_ArtifactId();
+
+    /**
+     * The meta object literal for the '<em><b>Version</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROJECT_META_DATA__VERSION = eINSTANCE.getProjectMetaData_Version();
 
   }
 

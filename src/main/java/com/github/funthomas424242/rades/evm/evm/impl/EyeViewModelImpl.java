@@ -10,6 +10,7 @@ import com.github.funthomas424242.rades.evm.evm.EvmPackage;
 import com.github.funthomas424242.rades.evm.evm.EyeViewModel;
 import com.github.funthomas424242.rades.evm.evm.ModelElement;
 
+import com.github.funthomas424242.rades.evm.evm.ProjectMetaData;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -34,10 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getElements <em>Elements</em>}</li>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getGroupId <em>Group Id</em>}</li>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getArtifactId <em>Artifact Id</em>}</li>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getVersion <em>Version</em>}</li>
- *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getProjectName <em>Project Name</em>}</li>
+ *   <li>{@link com.github.funthomas424242.rades.evm.evm.impl.EyeViewModelImpl#getProjectData <em>Project Data</em>}</li>
  * </ul>
  * </p>
  *
@@ -56,77 +54,14 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
   protected EList<ModelElement> elements;
 
   /**
-   * The default value of the '{@link #getGroupId() <em>Group Id</em>}' attribute.
+   * The cached value of the '{@link #getProjectData() <em>Project Data</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGroupId()
+   * @see #getProjectData()
    * @generated
    * @ordered
    */
-  protected static final String GROUP_ID_EDEFAULT = null;
-  /**
-   * The cached value of the '{@link #getGroupId() <em>Group Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGroupId()
-   * @generated
-   * @ordered
-   */
-  protected String groupId = GROUP_ID_EDEFAULT;
-  /**
-   * The default value of the '{@link #getArtifactId() <em>Artifact Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getArtifactId()
-   * @generated
-   * @ordered
-   */
-  protected static final String ARTIFACT_ID_EDEFAULT = null;
-  /**
-   * The cached value of the '{@link #getArtifactId() <em>Artifact Id</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getArtifactId()
-   * @generated
-   * @ordered
-   */
-  protected String artifactId = ARTIFACT_ID_EDEFAULT;
-  /**
-   * The default value of the '{@link #getVersion() <em>Version</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVersion()
-   * @generated
-   * @ordered
-   */
-  protected static final String VERSION_EDEFAULT = null;
-  /**
-   * The cached value of the '{@link #getVersion() <em>Version</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVersion()
-   * @generated
-   * @ordered
-   */
-  protected String version = VERSION_EDEFAULT;
-  /**
-   * The default value of the '{@link #getProjectName() <em>Project Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProjectName()
-   * @generated
-   * @ordered
-   */
-  protected static final String PROJECT_NAME_EDEFAULT = null;
-  /**
-   * The cached value of the '{@link #getProjectName() <em>Project Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getProjectName()
-   * @generated
-   * @ordered
-   */
-  protected String projectName = PROJECT_NAME_EDEFAULT;
+  protected ProjectMetaData projectData;
 
   /**
    * <!-- begin-user-doc -->
@@ -168,9 +103,9 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getGroupId()
+  public ProjectMetaData getProjectData()
   {
-    return groupId;
+    return projectData;
   }
 
   /**
@@ -178,12 +113,16 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setGroupId(String newGroupId)
+  public NotificationChain basicSetProjectData(ProjectMetaData newProjectData, NotificationChain msgs)
   {
-    String oldGroupId = groupId;
-    groupId = newGroupId;
+    ProjectMetaData oldProjectData = projectData;
+    projectData = newProjectData;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.EYE_VIEW_MODEL__GROUP_ID, oldGroupId, groupId));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA, oldProjectData, newProjectData);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -191,68 +130,20 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getArtifactId()
+  public void setProjectData(ProjectMetaData newProjectData)
   {
-    return artifactId;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setArtifactId(String newArtifactId)
-  {
-    String oldArtifactId = artifactId;
-    artifactId = newArtifactId;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.EYE_VIEW_MODEL__ARTIFACT_ID, oldArtifactId, artifactId));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getVersion()
-  {
-    return version;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVersion(String newVersion)
-  {
-    String oldVersion = version;
-    version = newVersion;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.EYE_VIEW_MODEL__VERSION, oldVersion, version));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getProjectName()
-  {
-    return projectName;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setProjectName(String newProjectName)
-  {
-    String oldProjectName = projectName;
-    projectName = newProjectName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.EYE_VIEW_MODEL__PROJECT_NAME, oldProjectName, projectName));
+    if (newProjectData != projectData)
+    {
+      NotificationChain msgs = null;
+      if (projectData != null)
+        msgs = ((InternalEObject)projectData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA, null, msgs);
+      if (newProjectData != null)
+        msgs = ((InternalEObject)newProjectData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA, null, msgs);
+      msgs = basicSetProjectData(newProjectData, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA, newProjectData, newProjectData));
   }
 
   /**
@@ -267,6 +158,8 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
     {
       case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
+      case EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA:
+        return basicSetProjectData(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -283,14 +176,8 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
     {
       case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
         return getElements();
-      case EvmPackage.EYE_VIEW_MODEL__GROUP_ID:
-        return getGroupId();
-      case EvmPackage.EYE_VIEW_MODEL__ARTIFACT_ID:
-        return getArtifactId();
-      case EvmPackage.EYE_VIEW_MODEL__VERSION:
-        return getVersion();
-      case EvmPackage.EYE_VIEW_MODEL__PROJECT_NAME:
-        return getProjectName();
+      case EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA:
+        return getProjectData();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -310,17 +197,8 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
         getElements().clear();
         getElements().addAll((Collection<? extends ModelElement>)newValue);
         return;
-      case EvmPackage.EYE_VIEW_MODEL__GROUP_ID:
-        setGroupId((String)newValue);
-        return;
-      case EvmPackage.EYE_VIEW_MODEL__ARTIFACT_ID:
-        setArtifactId((String)newValue);
-        return;
-      case EvmPackage.EYE_VIEW_MODEL__VERSION:
-        setVersion((String)newValue);
-        return;
-      case EvmPackage.EYE_VIEW_MODEL__PROJECT_NAME:
-        setProjectName((String)newValue);
+      case EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA:
+        setProjectData((ProjectMetaData)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -339,17 +217,8 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
       case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
         getElements().clear();
         return;
-      case EvmPackage.EYE_VIEW_MODEL__GROUP_ID:
-        setGroupId(GROUP_ID_EDEFAULT);
-        return;
-      case EvmPackage.EYE_VIEW_MODEL__ARTIFACT_ID:
-        setArtifactId(ARTIFACT_ID_EDEFAULT);
-        return;
-      case EvmPackage.EYE_VIEW_MODEL__VERSION:
-        setVersion(VERSION_EDEFAULT);
-        return;
-      case EvmPackage.EYE_VIEW_MODEL__PROJECT_NAME:
-        setProjectName(PROJECT_NAME_EDEFAULT);
+      case EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA:
+        setProjectData((ProjectMetaData)null);
         return;
     }
     super.eUnset(featureID);
@@ -367,39 +236,10 @@ public class EyeViewModelImpl extends EObjectImpl implements EyeViewModel
     {
       case EvmPackage.EYE_VIEW_MODEL__ELEMENTS:
         return elements != null && !elements.isEmpty();
-      case EvmPackage.EYE_VIEW_MODEL__GROUP_ID:
-        return GROUP_ID_EDEFAULT == null ? groupId != null : !GROUP_ID_EDEFAULT.equals(groupId);
-      case EvmPackage.EYE_VIEW_MODEL__ARTIFACT_ID:
-        return ARTIFACT_ID_EDEFAULT == null ? artifactId != null : !ARTIFACT_ID_EDEFAULT.equals(artifactId);
-      case EvmPackage.EYE_VIEW_MODEL__VERSION:
-        return VERSION_EDEFAULT == null ? version != null : !VERSION_EDEFAULT.equals(version);
-      case EvmPackage.EYE_VIEW_MODEL__PROJECT_NAME:
-        return PROJECT_NAME_EDEFAULT == null ? projectName != null : !PROJECT_NAME_EDEFAULT.equals(projectName);
+      case EvmPackage.EYE_VIEW_MODEL__PROJECT_DATA:
+        return projectData != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (groupId: ");
-    result.append(groupId);
-    result.append(", artifactId: ");
-    result.append(artifactId);
-    result.append(", version: ");
-    result.append(version);
-    result.append(", projectName: ");
-    result.append(projectName);
-    result.append(')');
-    return result.toString();
   }
 
 } //EyeViewModelImpl
